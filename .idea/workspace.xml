@@ -13,7 +13,7 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:orgin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -28,6 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1g2K8MK4muia4VmQoSTcODY9A3j" />
   <component name="ProjectViewState">
@@ -37,6 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -69,6 +71,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
@@ -83,5 +86,17 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="392" y="163" key="Vcs.Push.Dialog.v2/1600.0.1280.693/0.0.1600.860@0.0.1600.860" timestamp="1597307519559" />
+    <state x="609" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597601170518">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="609" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1600.0.1280.693/0.0.1600.860@0.0.1600.860" timestamp="1597601170518" />
+    <state x="415" y="218" key="git4idea.merge.GitMergeDialog" timestamp="1597601153417">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="415" y="218" key="git4idea.merge.GitMergeDialog/1600.0.1280.693/0.0.1600.860@0.0.1600.860" timestamp="1597601153417" />
+    <state x="526" y="331" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1597600906200">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="526" y="331" key="git4idea.remote.GitConfigureRemotesDialog/1600.0.1280.693/0.0.1600.860@0.0.1600.860" timestamp="1597600906200" />
   </component>
 </project>
