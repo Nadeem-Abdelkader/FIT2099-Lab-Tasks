@@ -25,7 +25,7 @@ public class University {
     public String displayUnits(){
         String output = "";
         for (int i = 0; i < 3; i++){
-            output += unitArrayList.get(i).getUnitDescription();
+            output += unitArrayList.get(i).description();
             output += "\n";
         }
         return output;

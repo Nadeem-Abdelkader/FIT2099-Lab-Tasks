@@ -7,7 +7,7 @@ public class Unit {
         this.unit_name = unit_name;
     }
 
-    public String getUnitDescription(){
+    public String description(){
         return unit_code + " " + unit_name;
     }
 }
