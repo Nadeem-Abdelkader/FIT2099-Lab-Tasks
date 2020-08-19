@@ -1,4 +1,7 @@
+import java.util.ArrayList;
+
 public class Unit {
+    ArrayList<Student> students = new ArrayList<>();
     String unit_code;
     String unit_name;
 
@@ -10,4 +13,10 @@ public class Unit {
     public String description(){
         return unit_code + " " + unit_name;
     }
+
+    public void enrolStudent(Student newStudent) {
+
+        students.add(newStudent);
+    }
+
 }
