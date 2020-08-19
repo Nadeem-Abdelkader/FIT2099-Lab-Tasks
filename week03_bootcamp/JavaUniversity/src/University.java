@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class University {
@@ -17,7 +20,7 @@ public class University {
         Unit unit2= new Unit("\nFIT2004","Algorithms and data structures");
         Unit unit3= new Unit("\nFIT2100","Operating systems");
 
-        Student student1 = new Student("978789","Jack","Taylor");
+        Student student1 = new Student(readString("Please enter StudentID: "), readString("Please enter Given Name: "), readString("Please enter Family Name: "));
         Student student2 = new Student("672989","Nadeem","Abdelkader");
         Student student3 = new Student("325789","Daniel","James");
 
@@ -49,5 +52,18 @@ public class University {
             }
         }
         return output.toString();
+    }
+
+    private String readString(String prompt) {
+        System.out.print(prompt);
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in)
+        );
+        String s = null;
+        try {
+            s = in.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return s;
     }
 }
