@@ -1,0 +1,15 @@
+Advantages of using numeric integer over Java string:
+    - More efficient to store info as an integer
+    - Easier to sort
+    - Easier to perform arithmetic expressions on them.
+
+Advantages of using Java string over numeric integer:
+    - Can contain any type of characters (e.g. "A-15707301")
+    - If a studentID starts with 0 (e.g. 030146), it will preserve it. Unlike integer data type which will discard any leading 0 (030146 --> 30146)
+
+The final decision is to use Java string because:
+    - Were working with a very small amount of information, so efficiency isn't a problem.
+    - Probably, won't need to sort by studentID, instead if sorting is necessary were most likely going to opt to sort by name.
+    - Not planning on to perform arithmetic operations on studentID.
+    - studentID may need to contain letters or special characters (maybe if a student still doesn't know his ID and opts to use his passport number which contains letters)
+    - Avoid disregarding leading zeros because they're part of the studentID.
