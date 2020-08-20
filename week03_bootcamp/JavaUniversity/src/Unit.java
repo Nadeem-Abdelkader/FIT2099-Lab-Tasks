@@ -15,7 +15,6 @@ public class Unit {
     }
 
     public void enrolStudent(Student newStudent) {
-
         students.add(newStudent);
     }
 

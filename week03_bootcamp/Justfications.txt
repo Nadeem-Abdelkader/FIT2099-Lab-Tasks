@@ -13,3 +13,7 @@ The final decision is to use Java string because:
     - Not planning on to perform arithmetic operations on studentID.
     - studentID may need to contain letters or special characters (maybe if a student still doesn't know his ID and opts to use his passport number which contains letters)
     - Avoid disregarding leading zeros because they're part of the studentID.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Using ArrayList instead of array beacuse array has fixed size, so we wont be able to add more students if necessary.
