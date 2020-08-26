@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public abstract class Assessment {
     private int weight;
-    HashMap<String, Mark> Marks = new HashMap<String, Mark>();
+    HashMap<String, Mark> Marks = new HashMap<>();
 
 
 
@@ -18,4 +18,8 @@ public abstract class Assessment {
 
     public abstract String description();
 
+    public void addMarks(Student newStudent,Mark newMark)
+    {
+        Marks.put(newStudent.getStudentID(), newMark);
+    }
 }

@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 
 public class Unit {
-    ArrayList<String> enrolledStudents = new ArrayList<String>();
+    ArrayList<String> enrolledStudents = new ArrayList<>();
     String unit_code;
     String unit_name;
     static int counter;
+    AssessmentScheme AssessmentScheme = new AssessmentScheme();
+
 
 
     public Unit(String unit_code, String unit_name) {
@@ -14,7 +16,7 @@ public class Unit {
     }
 
     public String description(){
-        return unit_code + " " + unit_name;
+        return "\n" + unit_code + "- " + unit_name;
     }
     public Student[] returnStudents(University university)
     {
@@ -36,23 +38,27 @@ public class Unit {
     public int totalMarks(Student student)
     {
         int totalMarks = 0;
-        double tempoInt = 0.0;
-        double tempoInt1 = 0.0;
+        double tempoInt;
+        double tempoInt1;
         double divide = 100.0;
         for(int i =0; i<AssessmentScheme.getAssessmentArrays().size();i++)
         {
 
-            Assessment assess = AssessmentScheme.getAssessmentArrays().get(i);
-            if(assess.Marks.containsKey(student.getStudentID()))
+            Assessment assessment = AssessmentScheme.getAssessmentArrays().get(i);
+            if(assessment.Marks.containsKey(student.getStudentID()))
             {
-                tempoInt = (assess).getWeight();
+                tempoInt = (assessment).getWeight();
                 tempoInt = (tempoInt/divide);
-                tempoInt1 =(assess.Marks.get(student.getStudentID()).getMarkTotal());
+                tempoInt1 =(assessment.Marks.get(student.getStudentID()).getMarkTotal());
                 totalMarks += (int)(tempoInt * tempoInt1);
             }
 
         }
         return totalMarks;
+    }
+    public AssessmentScheme getAssessment()
+    {
+        return AssessmentScheme;
     }
 
 
