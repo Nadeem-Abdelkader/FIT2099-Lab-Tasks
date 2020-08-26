@@ -76,19 +76,19 @@ public class University {
 
         System.out.println("Query:\n");
         System.out.println(student1.description() + ":"+
-                "\nexam 1 mark = " + exam1.Marks.get(student1.getStudentID()).getMarkTotal() +
-                "\nexam 2 mark = " + exam2.Marks.get(student1.getStudentID()).getMarkTotal()
-                + "\nassignment 1 mark = " + assignment1.Marks.get(student1.getStudentID()).getMarkTotal() + "\n");
+                "\nexam 1 mark = " + exam1.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student1.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student1.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student1.getStudentID()).getComment()+ "\n");
 
-        System.out.println(student2.description() + ":" +
-                "\nexam 1 mark = " + exam1.Marks.get(student2.getStudentID()).getMarkTotal() +
-                "\nexam 2 mark = " + exam2.Marks.get(student2.getStudentID()).getMarkTotal()
-                + "\nassignment 1 mark = " + assignment1.Marks.get(student2.getStudentID()).getMarkTotal() + "\n");
+        System.out.println(student2.description() + ":"+
+                "\nexam 1 mark = " + exam1.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student2.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student2.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student2.getStudentID()).getComment()+ "\n");
 
-        System.out.println(student3.description() + ":" +
-                "\nexam 1 mark = " + exam1.Marks.get(student3.getStudentID()).getMarkTotal() +
-                "\nexam 2 mark = " + exam2.Marks.get(student3.getStudentID()).getMarkTotal()
-                + "\nassignment 1 mark = " + assignment1.Marks.get(student3.getStudentID()).getMarkTotal() + "\n");
+        System.out.println(student3.description() + ":"+
+                "\nexam 1 mark = " + exam1.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student3.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student3.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student3.getStudentID()).getComment()+ "\n");
 
     }
 
