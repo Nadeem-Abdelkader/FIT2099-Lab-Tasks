@@ -13,6 +13,6 @@ public abstract class Assessment {
     }
 
 
-    public abstract String Description();
+    public abstract String description();
 
 }
