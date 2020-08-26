@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 Nadeem Emadeldin Hamed Hamed Abdelkader
 30146224
@@ -8,6 +10,7 @@ public class UniversityDriver {
         University uni1 = new University();
         uni1.createUnits();
         uni1.printstatus();
+
     }
 }
 

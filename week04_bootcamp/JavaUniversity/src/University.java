@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class University {
@@ -48,30 +49,47 @@ public class University {
         unit2.enrolStudent(student2.getStudentID());
         unit2.enrolStudent(student3.getStudentID());
 
-        Assessment exam_2_1 = new Exam(40,120);
-        Assessment exam_2_2 = new Exam(30,100);
-        Assessment assignment_2_1 = new Assignment(30, "Assignment # 1");
+        Assessment exam1 = new Exam(40,120);
+        Assessment exam2 = new Exam(30,100);
+        Assessment assignment1 = new Assignment(30, "Assignment # 1");
 
-        unit2.getAssessment().addAssessment(exam_2_1);
-        unit2.getAssessment().addAssessment(exam_2_2);
-        unit2.getAssessment().addAssessment(assignment_2_1);
+        unit2.getAssessment().addAssessment(exam1);
+        unit2.getAssessment().addAssessment(exam2);
+        unit2.getAssessment().addAssessment(assignment1);
 
         Mark mark1 = new Mark(100, "ACED!");
         Mark mark2 = new Mark(80,"HD");
         Mark mark3 = new Mark(70,"D");
 
 
-        exam_2_1.addMarks(student1, mark1);
-        exam_2_2.addMarks(student1, mark1);
-        assignment_2_1.addMarks(student1, mark1);
+        exam1.addMarks(student1, mark1);
+        exam2.addMarks(student1, mark1);
+        assignment1.addMarks(student1, mark1);
 
-        exam_2_1.addMarks(student2, mark1);
-        exam_2_2.addMarks(student2, mark2);
-        assignment_2_1.addMarks(student2, mark2);
+        exam1.addMarks(student2, mark1);
+        exam2.addMarks(student2, mark2);
+        assignment1.addMarks(student2, mark2);
 
-        exam_2_1.addMarks(student3, mark1);
-        exam_2_2.addMarks(student3, mark2);
-        assignment_2_1.addMarks(student2, mark3);
+        exam1.addMarks(student3, mark1);
+        exam2.addMarks(student3, mark2);
+        assignment1.addMarks(student3, mark3);
+
+        System.out.println("Query:\n");
+        System.out.println(student1.description() + ":"+
+                "\nexam 1 mark = " + exam1.Marks.get(student1.getStudentID()).getMarkTotal() +
+                "\nexam 2 mark = " + exam2.Marks.get(student1.getStudentID()).getMarkTotal()
+                + "\nassignment 1 mark = " + assignment1.Marks.get(student1.getStudentID()).getMarkTotal() + "\n");
+
+        System.out.println(student2.description() + ":" +
+                "\nexam 1 mark = " + exam1.Marks.get(student2.getStudentID()).getMarkTotal() +
+                "\nexam 2 mark = " + exam2.Marks.get(student2.getStudentID()).getMarkTotal()
+                + "\nassignment 1 mark = " + assignment1.Marks.get(student2.getStudentID()).getMarkTotal() + "\n");
+
+        System.out.println(student3.description() + ":" +
+                "\nexam 1 mark = " + exam1.Marks.get(student3.getStudentID()).getMarkTotal() +
+                "\nexam 2 mark = " + exam2.Marks.get(student3.getStudentID()).getMarkTotal()
+                + "\nassignment 1 mark = " + assignment1.Marks.get(student3.getStudentID()).getMarkTotal() + "\n");
+
     }
 
     public String displayUnits() {
