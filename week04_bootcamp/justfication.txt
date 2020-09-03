@@ -1,0 +1,1 @@
+I choosed ArrayList to store enrolled students because it doesn't have a fixed size so more students can be added at anytime.
