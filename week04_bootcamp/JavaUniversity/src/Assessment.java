@@ -1,10 +1,12 @@
 import java.util.HashMap;
-
+//
 public abstract class Assessment {
     private int weight;
-    HashMap<String, Mark> Marks = new HashMap<>();
+    private HashMap<String, Mark> Marks = new HashMap<>();
 
-
+    public HashMap<String, Mark> getMarks() {
+        return Marks;
+    }
 
     public void setWeight(int newWeight) {
         if (newWeight> 0 & newWeight <101)
@@ -18,8 +20,10 @@ public abstract class Assessment {
 
     public abstract String description();
 
+    //
     public void addMarks(Student newStudent,Mark newMark)
     {
         Marks.put(newStudent.getStudentID(), newMark);
     }
+
 }

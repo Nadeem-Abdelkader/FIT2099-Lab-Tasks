@@ -1,4 +1,4 @@
-
+//
 public class Exam extends Assessment {
     private int duration;
 

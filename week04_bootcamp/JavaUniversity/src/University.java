@@ -7,11 +7,13 @@ import java.util.HashMap;
 
 public class University {
 
-    ArrayList<Unit> unitArrayList = new ArrayList<>();
-    HashMap<String , Student> Students = new HashMap<>();
+    private ArrayList<Unit> unitArrayList = new ArrayList<>();
+    //
+    private HashMap<String , Student> Students = new HashMap<>();
 
 
     public void printstatus() {
+        this.createUnits();
         System.out.println("Welcome to Java University");
         System.out.println(this.displayUnits());
         //System.out.println("\n");
@@ -74,21 +76,22 @@ public class University {
         exam2.addMarks(student3, mark2);
         assignment1.addMarks(student3, mark3);
 
+        //
         System.out.println("Query:\n");
         System.out.println(student1.description() + ":"+
-                "\nexam 1 mark = " + exam1.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student1.getStudentID()).getComment()+
-                "\nexam 2 mark = " + exam2.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student1.getStudentID()).getComment()+
-                "\nassignment 1 mark = " + assignment1.Marks.get(student1.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student1.getStudentID()).getComment()+ "\n");
+                "\nexam 1 mark = " + exam1.getMarks().get(student1.getStudentID()).getMarkTotal() + " - " + exam1.getMarks().get(student1.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.getMarks().get(student1.getStudentID()).getMarkTotal() + " - " + exam2.getMarks().get(student1.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.getMarks().get(student1.getStudentID()).getMarkTotal() + " - " + assignment1.getMarks().get(student1.getStudentID()).getComment()+ "\n");
 
         System.out.println(student2.description() + ":"+
-                "\nexam 1 mark = " + exam1.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student2.getStudentID()).getComment()+
-                "\nexam 2 mark = " + exam2.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student2.getStudentID()).getComment()+
-                "\nassignment 1 mark = " + assignment1.Marks.get(student2.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student2.getStudentID()).getComment()+ "\n");
+                "\nexam 1 mark = " + exam1.getMarks().get(student2.getStudentID()).getMarkTotal() + " - " + exam1.getMarks().get(student2.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.getMarks().get(student2.getStudentID()).getMarkTotal() + " - " + exam2.getMarks().get(student2.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.getMarks().get(student2.getStudentID()).getMarkTotal() + " - " + assignment1.getMarks().get(student2.getStudentID()).getComment()+ "\n");
 
         System.out.println(student3.description() + ":"+
-                "\nexam 1 mark = " + exam1.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + exam1.Marks.get(student3.getStudentID()).getComment()+
-                "\nexam 2 mark = " + exam2.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + exam2.Marks.get(student3.getStudentID()).getComment()+
-                "\nassignment 1 mark = " + assignment1.Marks.get(student3.getStudentID()).getMarkTotal() + " - " + assignment1.Marks.get(student3.getStudentID()).getComment()+ "\n");
+                "\nexam 1 mark = " + exam1.getMarks().get(student3.getStudentID()).getMarkTotal() + " - " + exam1.getMarks().get(student3.getStudentID()).getComment()+
+                "\nexam 2 mark = " + exam2.getMarks().get(student3.getStudentID()).getMarkTotal() + " - " + exam2.getMarks().get(student3.getStudentID()).getComment()+
+                "\nassignment 1 mark = " + assignment1.getMarks().get(student3.getStudentID()).getMarkTotal() + " - " + assignment1.getMarks().get(student3.getStudentID()).getComment()+ "\n");
 
     }
 
@@ -97,8 +100,8 @@ public class University {
         for (int i = 0; i<Unit.counter; i++) {
             output += unitArrayList.get(i).description() + "\n";
             output += "Enrolled Students: \n";
-            for (int j = 0; j < unitArrayList.get(i).enrolledStudents.size();j++) {
-                output += Students.get(unitArrayList.get(i).enrolledStudents.get(j)).description() + "\n";
+            for (int j = 0; j < unitArrayList.get(i).getEnrolledStudents().size();j++) {
+                output += Students.get(unitArrayList.get(i).getEnrolledStudents().get(j)).description() + "\n";
             }
         }
         return output;
