@@ -3,7 +3,7 @@ public class Assignment extends Assessment {
 
     private String title;
 
-    public Assignment(int newWeight, String newTitle) {
+    public Assignment(int newWeight, String newTitle) throws Exception {
         setWeight(newWeight);
         this.title = newTitle;
     }

@@ -73,6 +73,7 @@ public class University {
 
         Exam exam1 = null;
         Exam exam2 = null;
+        Assignment assignment1 = null;
 
         try {
             exam1 = new Exam(40,180);
@@ -88,8 +89,14 @@ public class University {
             //e.printStackTrace();
             return;
         }
+        try {
+            assignment1 = new Assignment(30, "Assignment # 1");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
 
-        Assessment assignment1 = new Assignment(30, "Assignment # 1");
 
         unit2.getAssessment().addAssessment(exam1);
         unit2.getAssessment().addAssessment(exam2);

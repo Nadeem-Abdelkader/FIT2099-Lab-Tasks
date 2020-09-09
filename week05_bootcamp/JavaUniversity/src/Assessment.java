@@ -8,9 +8,15 @@ public abstract class Assessment {
         return Marks;
     }
 
-    public void setWeight(int newWeight) {
-        if (newWeight> 0 & newWeight <101)
-            weight = newWeight;
+    public void setWeight(int newWeight) throws Exception {
+        if (newWeight < 1) {
+            throw new Exception("Weightage too low");
+        }
+
+        if (newWeight > 100) {
+            throw new Exception("Weightage too high");
+        }
+        weight = newWeight;
     }
 
     public int getWeight() {
