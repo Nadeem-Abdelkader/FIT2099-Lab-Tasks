@@ -71,8 +71,24 @@ public class University {
         unit2.enrolStudent(student2.getStudentID());
         unit2.enrolStudent(student3.getStudentID());
 
-        Assessment exam1 = new Exam(40,120);
-        Assessment exam2 = new Exam(30,100);
+        Exam exam1 = null;
+        Exam exam2 = null;
+
+        try {
+            exam1 = new Exam(40,180);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+        try {
+            exam2 = new Exam(30,100);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+
         Assessment assignment1 = new Assignment(30, "Assignment # 1");
 
         unit2.getAssessment().addAssessment(exam1);
