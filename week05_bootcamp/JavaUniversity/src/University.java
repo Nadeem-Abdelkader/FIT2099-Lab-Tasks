@@ -12,7 +12,7 @@ public class University {
     private HashMap<String , Student> Students = new HashMap<>();
 
 
-    public void printstatus() {
+    public void printstatus() throws Exception {
         this.createUnits();
         System.out.println("Welcome to Java University");
         System.out.println(this.displayUnits());
@@ -30,7 +30,7 @@ public class University {
         unitArrayList.add(unit);
     }
 
-    public void createUnits(){
+    public void createUnits() throws Exception {
         Student student1 = null;
         Student student2 = null;
         Student student3 = null;
@@ -97,10 +97,27 @@ public class University {
             return;
         }
 
-
-        unit2.getAssessment().addAssessment(exam1);
-        unit2.getAssessment().addAssessment(exam2);
-        unit2.getAssessment().addAssessment(assignment1);
+        try {
+            unit2.getAssessment().addAssessment(exam1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+        try {
+            unit2.getAssessment().addAssessment(exam2);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+        try {
+            unit2.getAssessment().addAssessment(assignment1);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
 
         Mark mark1 = new Mark(100, "ACED!");
         Mark mark2 = new Mark(80,"HD");
