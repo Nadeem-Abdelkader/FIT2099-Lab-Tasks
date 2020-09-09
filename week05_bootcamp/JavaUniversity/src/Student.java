@@ -8,12 +8,17 @@ public class Student {
     different cultures have different understanding of first and last names.
      */
 
-    public Student(String newStudentId) {
-
+    public Student(String newStudentId) throws Exception {
+        if (newStudentId.length() != 8) {
+            throw new Exception();
+        }
         studentId = newStudentId;
     }
 
-    public Student(String newStudentId, String newGivenName, String newFamilyName) {
+    public Student(String newStudentId, String newGivenName, String newFamilyName) throws Exception {
+        if (newStudentId.length() != 8) {
+            throw new Exception();
+        }
         studentId = newStudentId;
         setGivenName(newGivenName);
         setFamilyName(newFamilyName);

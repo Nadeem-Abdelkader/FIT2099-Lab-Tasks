@@ -16,7 +16,6 @@ public class University {
         this.createUnits();
         System.out.println("Welcome to Java University");
         System.out.println(this.displayUnits());
-        //System.out.println("\n");
         System.out.println(this.displayUnits1());
         System.out.println("Thank you for using Java University");
 
@@ -28,14 +27,35 @@ public class University {
         return Students;
     }
     public void addUnits(Unit unit) {
-
         unitArrayList.add(unit);
     }
 
     public void createUnits(){
-        Student student1 = new Student("123456", "Daniel", "James");
-        Student student2 = new Student("301462", "Nadeem", "Abdelkader");
-        Student student3 = new Student("434521", "Danny", "Green");
+        Student student1 = null;
+        Student student2 = null;
+        Student student3 = null;
+
+        try {
+            student1 = new Student("123456789", "Daniel", "James");
+        } catch (Exception e) {
+            System.out.println("The Student ID must be 8 digits");
+            e.printStackTrace();
+            return;
+        }
+        try {
+            student2 = new Student("30146244", "Nadeem", "Abdelkader");
+        } catch (Exception e) {
+            System.out.println("The Student ID must e8 digits");
+            e.printStackTrace();
+            return;
+        }
+        try {
+            student3 = new Student("87654321", "Danny", "Green");
+        } catch (Exception e) {
+            System.out.println("The Student ID must e8 digits");
+            e.printStackTrace();
+            return;
+        }
 
         this.admitStudent(student1);
         this.admitStudent(student2);
