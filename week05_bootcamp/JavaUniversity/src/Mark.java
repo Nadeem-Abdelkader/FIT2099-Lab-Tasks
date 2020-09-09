@@ -3,27 +3,19 @@ public class Mark{
     private int markTotal;
     private String comment;
 
-    public Mark(int newMarkTotal, String newComment)
-    {
-        setComment(newComment);
-        try {
-            setMarkTotal(newMarkTotal);
-        } catch (Exception e) {
-            e.getMessage();
-            //e.printStackTrace();
-            return;
+    public Mark(int newMarkTotal, String newComment) throws Exception {
+        if (newMarkTotal < 1) {
+            throw new Exception("Mark too low");
         }
+        if (newMarkTotal > 100) {
+            throw new Exception("Mark too high");
+        }
+        setMarkTotal(newMarkTotal);
+        setComment(newComment);
     }
 
-    public Mark(int newMarkTotal)
-    {
-        try {
-            setMarkTotal(newMarkTotal);
-        } catch (Exception e) {
-            e.getMessage();
-            //e.printStackTrace();
-            return;
-        }
+    public Mark(int newMarkTotal) throws Exception {
+        setMarkTotal(newMarkTotal);
     }
 
     public int getMarkTotal()
@@ -31,14 +23,7 @@ public class Mark{
         return markTotal;
     }
 
-    public void setMarkTotal(int newMarks) throws Exception {
-        if (newMarks < 1) {
-            throw new Exception("Mark too low");
-        }
-
-        if (newMarks > 100) {
-            throw new Exception("Mark too high");
-        }
+    public void setMarkTotal(int newMarks){
         markTotal = newMarks;
     }
 

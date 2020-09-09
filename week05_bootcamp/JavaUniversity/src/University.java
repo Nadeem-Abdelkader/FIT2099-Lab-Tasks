@@ -45,7 +45,7 @@ public class University {
         try {
             student2 = new Student("30146244", "Nadeem", "Abdelkader");
         } catch (Exception e) {
-            System.out.println("The Student ID must e8 digits");
+            System.out.println("The Student ID must be8 digits");
             e.printStackTrace();
             return;
         }
@@ -119,9 +119,31 @@ public class University {
             return;
         }
 
-        Mark mark1 = new Mark(100, "ACED!");
-        Mark mark2 = new Mark(80,"HD");
-        Mark mark3 = new Mark(70,"D");
+        Mark mark1 = null;
+        Mark mark2 = null;
+        Mark mark3 = null;
+
+        try {
+            mark1 = new Mark(100, "ACED!");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+        try {
+            mark2 = new Mark(80,"HD");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
+        try {
+            mark3 = new Mark(70,"D");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            //e.printStackTrace();
+            return;
+        }
 
 
         exam1.addMarks(student1, mark1);
