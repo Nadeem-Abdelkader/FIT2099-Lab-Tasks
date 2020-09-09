@@ -12,7 +12,7 @@ public class University {
     private HashMap<String , Student> Students = new HashMap<>();
 
 
-    public void printstatus() throws Exception {
+    public void printstatus(){
         this.createUnits();
         System.out.println("Welcome to Java University");
         System.out.println(this.displayUnits());
@@ -30,7 +30,7 @@ public class University {
         unitArrayList.add(unit);
     }
 
-    public void createUnits() throws Exception {
+    public void createUnits(){
         Student student1 = null;
         Student student2 = null;
         Student student3 = null;
