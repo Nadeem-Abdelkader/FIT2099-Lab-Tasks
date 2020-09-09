@@ -36,7 +36,7 @@ public class University {
         Student student3 = null;
 
         try {
-            student1 = new Student("123456789", "Daniel", "James");
+            student1 = new Student("12345678", "Daniel", "James");
         } catch (Exception e) {
             System.out.println("The Student ID must be 8 digits");
             e.printStackTrace();
