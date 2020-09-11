@@ -1,8 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 public class University {
@@ -31,9 +27,9 @@ public class University {
     }
 
     public void createUnits(){
-        Student student1 = null;
-        Student student2 = null;
-        Student student3 = null;
+        Student student1;
+        Student student2;
+        Student student3;
 
         try {
             student1 = new Student("12345678", "Daniel", "James");
@@ -71,9 +67,9 @@ public class University {
         unit2.enrolStudent(student2.getStudentID());
         unit2.enrolStudent(student3.getStudentID());
 
-        Exam exam1 = null;
-        Exam exam2 = null;
-        Assignment assignment1 = null;
+        Exam exam1;
+        Exam exam2;
+        Assignment assignment1;
 
         try {
             exam1 = new Exam(40,180);
@@ -119,9 +115,9 @@ public class University {
             return;
         }
 
-        Mark mark1 = null;
-        Mark mark2 = null;
-        Mark mark3 = null;
+        Mark mark1;
+        Mark mark2;
+        Mark mark3;
 
         try {
             mark1 = new Mark(100, "ACED!");
@@ -178,38 +174,35 @@ public class University {
     }
 
     public String displayUnits() {
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for (int i = 0; i<Unit.counter; i++) {
-            output += unitArrayList.get(i).description() + "\n";
-            output += "Enrolled Students: \n";
+            output.append(unitArrayList.get(i).description()).append("\n");
+            output.append("Enrolled Students: \n");
             for (int j = 0; j < unitArrayList.get(i).getEnrolledStudents().size();j++) {
-                output += Students.get(unitArrayList.get(i).getEnrolledStudents().get(j)).description() + "\n";
+                output.append(Students.get(unitArrayList.get(i).getEnrolledStudents().get(j)).description()).append("\n");
             }
         }
-        return output;
+        return output.toString();
     }
 
     public String displayUnits1()
     {
 
-        String output = "";
-        for (int i = 0; i < unitArrayList.size(); i++)
-        {
-            output += unitArrayList.get(i).description();
-            output += "\n";
-            Student[] newArray =unitArrayList.get(i).returnStudents(this);
-            for (int j = 0; j<newArray.length;j++)
-            {
-                output += newArray[j].description();
-                output += "\n";
-                output += "Total Marks: ";
-                output += unitArrayList.get(i).totalMarks(newArray[j]);
-                output += "\n";
+        StringBuilder output = new StringBuilder();
+        for (Unit unit : unitArrayList) {
+            output.append(unit.description());
+            output.append("\n");
+            Student[] newArray = unit.returnStudents(this);
+            for (Student student : newArray) {
+                output.append(student.description());
+                output.append("\n");
+                output.append("Total Marks: ");
+                output.append(unit.totalMarks(student));
+                output.append("\n");
             }
-            //output += "\n";
         }
 
-        return output;
+        return output.toString();
 
     }
 }

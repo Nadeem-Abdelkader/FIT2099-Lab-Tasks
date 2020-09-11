@@ -9,7 +9,7 @@ public class Exam extends Assessment {
 
     public String description()
     {
-        String output = "";
+        String output;
         output = "Exam : duration " + this.duration + " minutes, weight " + getWeight() + "%";
         return output;
 

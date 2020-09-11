@@ -15,6 +15,12 @@ public class Mark{
     }
 
     public Mark(int newMarkTotal) throws Exception {
+        if (newMarkTotal < 1) {
+            throw new Exception("Mark too low");
+        }
+        if (newMarkTotal > 100) {
+            throw new Exception("Mark too high");
+        }
         setMarkTotal(newMarkTotal);
     }
 
