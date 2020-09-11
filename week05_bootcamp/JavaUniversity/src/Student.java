@@ -30,7 +30,7 @@ public class Student {
 
     public void setStudentId(String studentId) throws Exception {
         if (studentId.length() != 8) {
-            throw new Exception();
+            throw new Exception("Student ID must be 8 digits!");
         }
         this.studentId = studentId;
     }

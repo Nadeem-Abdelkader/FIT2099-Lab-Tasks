@@ -34,21 +34,21 @@ public class University {
         try {
             student1 = new Student("12345678", "Daniel", "James");
         } catch (Exception e) {
-            System.out.println("The Student ID must be 8 digits");
+            System.out.println(e.getMessage());
             e.printStackTrace();
             return;
         }
         try {
             student2 = new Student("30146244", "Nadeem", "Abdelkader");
         } catch (Exception e) {
-            System.out.println("The Student ID must be8 digits");
+            System.out.println(e.getMessage());
             e.printStackTrace();
             return;
         }
         try {
             student3 = new Student("87654321", "Danny", "Green");
         } catch (Exception e) {
-            System.out.println("The Student ID must e8 digits");
+            System.out.println(e.getMessage());
             e.printStackTrace();
             return;
         }
