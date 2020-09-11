@@ -9,17 +9,11 @@ public class Student {
      */
 
     public Student(String newStudentId) throws Exception {
-        if (newStudentId.length() != 8) {
-            throw new Exception();
-        }
-        studentId = newStudentId;
+        setStudentId(newStudentId);
     }
 
     public Student(String newStudentId, String newGivenName, String newFamilyName) throws Exception {
-        if (newStudentId.length() != 8) {
-            throw new Exception();
-        }
-        studentId = newStudentId;
+        setStudentId(newStudentId);
         setGivenName(newGivenName);
         setFamilyName(newFamilyName);
     }
@@ -33,6 +27,14 @@ public class Student {
 
         familyName = newFamilyName;
     }
+
+    public void setStudentId(String studentId) throws Exception {
+        if (studentId.length() != 8) {
+            throw new Exception();
+        }
+        this.studentId = studentId;
+    }
+
     public String getName(){
 
         return this.givenName + " " + this.familyName;
