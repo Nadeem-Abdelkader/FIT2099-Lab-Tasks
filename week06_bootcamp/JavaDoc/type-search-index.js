@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"Assessment"},{"p":"<Unnamed>","l":"AssessmentScheme"},{"p":"<Unnamed>","l":"Assignment"},{"p":"<Unnamed>","l":"Exam"},{"p":"<Unnamed>","l":"Mark"},{"p":"<Unnamed>","l":"Student"},{"p":"<Unnamed>","l":"Unit"},{"p":"<Unnamed>","l":"University"},{"p":"<Unnamed>","l":"UniversityDriver"}]
