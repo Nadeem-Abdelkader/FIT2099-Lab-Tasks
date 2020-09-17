@@ -8,13 +8,14 @@ public abstract class Assessment {
 
     /**
      * returns mark for certain assignment for a certain student
+     * @return Marks - mark for certain assignment for a certain student
      */
     public HashMap<String, Mark> getMarks() {
         return Marks;
     }
     /**
      * setter function for weight
-     * @param newWeight
+     * @param newWeight - weight to be set to
      * @throws Exception - if newWeight greater than 100 or newWeight less than 1
      */
     public void setWeight(int newWeight) throws Exception {

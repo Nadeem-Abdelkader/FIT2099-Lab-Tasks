@@ -26,7 +26,7 @@ public class Exam extends Assessment {
     }
     /**
      * setter function for duration
-     * @param newDuration
+     * @param newDuration - duartion to be set to
      * @throws Exception - if newDuration is greater than 180 or less than 30
      */
     public void setDuration(int newDuration) throws Exception {

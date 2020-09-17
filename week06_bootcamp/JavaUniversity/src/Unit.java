@@ -37,6 +37,7 @@ public class Unit {
 
     /**
      * getter function for students at university that take this unit
+     * @param university - university to search in for enrolled students
      * @return array of the students in the university that take this unit
      */
     public Student[] returnStudents(University university)
@@ -55,6 +56,7 @@ public class Unit {
     }
     /**
      * enrolls student in the unit
+     * @param newStudentId - student ID for student to be enrolled
      */
     public void enrolStudent(String newStudentId) {
         enrolledStudents.add(newStudentId);
@@ -62,6 +64,7 @@ public class Unit {
 
     /**
      * calculates total marks for a student
+     * @param student - student object to calculate total marks for
      * @return total marks for a student
      */
     public int totalMarks(Student student)

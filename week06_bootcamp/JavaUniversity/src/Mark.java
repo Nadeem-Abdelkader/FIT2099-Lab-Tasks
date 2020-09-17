@@ -37,7 +37,7 @@ public class Mark{
 
     /**
      * setter function for markTotal
-     * @param newMarks
+     * @param newMarks - marks to be set to
      * @throws Exception - if newMarks is greater than 100 or less than 1
      */
     public void setMarkTotal(int newMarks) throws Exception {
@@ -61,7 +61,7 @@ public class Mark{
 
     /**
      * setter function for comment
-     * @param newComment
+     * @param newComment - comment to be set to
      */
     public void setComment(String newComment)
     {
