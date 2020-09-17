@@ -30,6 +30,5 @@ public class AssessmentScheme {
             throw new Exception("Total weightage is not 100");
         }
         assessmentArrays.add(newAssessment);
-        //y
     }
 }
