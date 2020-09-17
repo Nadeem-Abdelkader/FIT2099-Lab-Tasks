@@ -15,7 +15,7 @@ public abstract class Assessment {
     /**
      * setter function for weight
      * @param newWeight
-     * @throws Exception - if new newWeight > 100 or newWeight < 1
+     * @throws Exception - if newWeight > 100 or newWeight < 1
      */
     public void setWeight(int newWeight) throws Exception {
         if (newWeight < 1) {
