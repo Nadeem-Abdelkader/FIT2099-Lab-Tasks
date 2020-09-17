@@ -1,28 +1,44 @@
 import java.util.ArrayList;
-
+/**
+ * Creates a Unit object
+ */
 public class Unit {
-    //
     private ArrayList<String> enrolledStudents = new ArrayList<>();
     private String unit_code;
     private String unit_name;
     static int counter;
-    //
     private AssessmentScheme AssessmentScheme = new AssessmentScheme();
 
-
-    public ArrayList<String> getEnrolledStudents() {
-        return enrolledStudents;
-    }
-
+    /**
+     * Constructor function for the Unit class
+     * @param unit_code - the unit's code
+     * @param unit_name - the unit's name
+     */
     public Unit(String unit_code, String unit_name) {
         this.unit_code = unit_code;
         this.unit_name = unit_name;
         counter += 1;
     }
 
+    /**
+     * getter function for enrolledStudents
+     * @return enrolledStudents
+     */
+    public ArrayList<String> getEnrolledStudents() {
+        return enrolledStudents;
+    }
+
+    /**
+     * @return - string describing an Units's code and name
+     */
     public String description(){
         return "\n" + unit_code + "- " + unit_name;
     }
+
+    /**
+     * getter function for students at university that take this unit
+     * @return array of the students in the university that take this unit
+     */
     public Student[] returnStudents(University university)
     {
 
@@ -37,10 +53,17 @@ public class Unit {
         }
         return array;
     }
+    /**
+     * enrolls student in the unit
+     */
     public void enrolStudent(String newStudentId) {
         enrolledStudents.add(newStudentId);
     }
-    //
+
+    /**
+     * calculates total marks for a student
+     * @return total marks for a student
+     */
     public int totalMarks(Student student)
     {
         int totalMarks = 0;
@@ -62,6 +85,10 @@ public class Unit {
         }
         return totalMarks;
     }
+    /**
+     * getter function for AssessmentScheme
+     * @return AssessmentScheme
+     */
     public AssessmentScheme getAssessment()
     {
         return AssessmentScheme;
